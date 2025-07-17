@@ -32,3 +32,7 @@ def download_audio():
 @app.route("/files/<filename>")
 def serve_file(filename):
     return send_file(os.path.join("downloads", filename), as_attachment=True)
+
+# ✅ Render এ কাজ করার জন্য এটা অবশ্যই দরকার
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
